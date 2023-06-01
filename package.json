@@ -1,0 +1,50 @@
+{
+  "name": "LPF",
+  "version": "1.1.0",
+  "description": "Local Pathogen Finder",
+  "main": "main.js",
+  "scripts": {
+    "dev": "npm run development",
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "linux": {
+      "desktop": {
+        "Terminal": "true",
+        "Name": "LPF",
+        "Icon": "/opt/LPF/local_app/images/report-icon.png"
+      }
+    },
+    "appId": "com.LPF.app"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^19.0.4",
+    "electron-builder": "^23.1.0",
+    "electron-rebuild": "^3.2.7"
+  },
+  "dependencies": {
+    "better-sqlite3": "^7.6.2",
+    "crypto-js": "^4.1.1",
+    "csv-parse": "^5.3.6",
+    "dialogs": "^2.0.1",
+    "electron-forge": "^5.2.4",
+    "electron-json-storage": "^4.5.0",
+    "electron-store": "^8.0.2",
+    "fast-csv": "^4.3.6",
+    "gsap": "^3.10.4",
+    "jest-cli": "^28.1.3",
+    "update-electron-app": "^2.0.1"
+  },
+  "postinstall": "electron-builder install-app-deps"
+}

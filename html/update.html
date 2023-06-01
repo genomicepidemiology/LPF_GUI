@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Pathogen Finder 1.0</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/update.js" type="text/javascript"></script>
+</head>
+
+
+  <body>
+<!-- Side navigation -->
+<div class="sidenav" id="mySidebar">
+    <a href="./index.html" id>Home</a>
+    <a href="./results.html">Results</>
+    <a href="./concat.html">Merge FastQ</a>
+    <a href="./update.html">Update</a>
+</div>
+
+  <div class="main" id="main">
+      <main data-router-wrapper>
+      <section data-router-view="Guide" class="Guide">
+          <div class ="home-choose">
+              <h1>Update LPF software and dependencies</h1><br><br>
+              <button onclick="update_LPF('pab');" type="button" class="analyse-btn"><i class="fa fa-address-book-o"></i>Update and rebuild the LPF app</button>
+              <button type="button" class="analyse-btn"><i class="fa fa-address-book-o"></i>Update Databases (Doesn't work)</button> <br> <br>
+              <button type="button" class="analyse-btn"><i class="fa fa-address-book-o"></i>Check for new dependency updates and update (Doesn't work)</button>
+            <div class="loader" id="loader">
+              </div>
+              <pre id="loadermessage"></pre>
+
+          </div>
+
+      </section>
+    </main>
+  </div>
+
+  <script type="text/javascript">
+      document.getElementById('upload-config-file').addEventListener('change', readSingleFile, false);
+  </script>
+  </body>
+</html>
