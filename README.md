@@ -1,41 +1,49 @@
-# electron-quick-start
+# LPF_GUI
 
-**Clone and run for a quick way to see Electron in action.**
+LPF_GUI is a Graphical User Interface (GUI) for the LPF (Local Pathogen Finder) tool developed by the Genomic Epidemiology Group. This repository provides instructions for downloading and installing the precompiled version of the LPF_GUI application, as well as details for manually building the app from the source code.
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/latest/tutorial/quick-start) within the Electron documentation.
+## Precompiled Version
 
-A basic Electron application needs just these files:
+To quickly get started with LPF_GUI, follow these steps:
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
+1. Download the precompiled version of LPF_GUI from the following link: [PLACEHOLDER_LINK](PLACEHOLDER_LINK).
+   ```bash
+   wget PLACEHOLDER_LINK
+    ```
 
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/latest/tutorial/quick-start).
-
-## To Use
-
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
+2. Unpack the downloaded tarball using the tar command:
 ```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies
-npm install
-# Run the app
-npm start
-```
+   tar -xvf LPF_GUI.tar.gz
+   ```
+3. Navigate to the LPF_GUI directory and run the setup python script:
+```bash
+   cd LPF_GUI
+   python3 setup_gui.py
+   ```
 
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+## Manual Build (Not Recommended)
 
-## fixtures for Learning Electron
+**Note**: Requires NodeJS 18 (conda install -c conda-forge nodejs=18)
 
-- [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
-- [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - sample starter apps created by the community
-- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
+1. Clone this GitHub repository to your local machine:
+   ```bash
+   git clone https://github.com/genomicepidemiology/LPF_GUI.git
+    ```
+2. Navigate to the LPF_GUI directory and run the build script:
+```bash
+   cd LPF_GUI
+   ./build.sh
+   ```
+3. After the build process is complete, you can package the app by running the package_and_zip.sh script:
+   ```bash
+   ./package_and_zip.sh
+   ```
+
+This will generate a tarball archive that contains the app, which can be downloaded from the following link: PLACEHOLDER_LINK. Follow the instructions mentioned in the "Precompiled Version" section above to unpack the tarball and install the LPF_GUI app.
+
+**Note:** The manual build process requires additional dependencies and may not be as straightforward as using the precompiled version. It is recommended to use the precompiled version whenever possible.
 
 ## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
-[CC0 1.0 (Public Domain)](LICENSE.md)
+
