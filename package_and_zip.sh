@@ -1,4 +1,4 @@
-rm lpf_app
+rm -rf lpf_app
 mkdir lpf_app
 cp -r dist lpf_app/.
 cp setup_gui.py lpf_app/.
