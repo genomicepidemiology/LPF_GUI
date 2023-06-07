@@ -38,8 +38,14 @@ To quickly get started with LPF_GUI, follow these steps:
    ```bash
    ./package_and_zip.sh
    ```
-
+   
 This will generate a tarball archive that contains the app, which can be downloaded from the following link: PLACEHOLDER_LINK. Follow the instructions mentioned in the "Precompiled Version" section above to unpack the tarball and install the LPF_GUI app.
+
+## Usage
+LPF can be launched as any other application on your system from the start menu or by running the following command in the terminal:
+```bash
+   /opt/lpf_app/dist/linux-unpacked/lpf_app
+   ```
 
 **Note:** The manual build process requires additional dependencies and may not be as straightforward as using the precompiled version. It is recommended to use the precompiled version whenever possible.
 
